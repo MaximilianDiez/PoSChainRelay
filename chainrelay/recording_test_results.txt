@@ -1,0 +1,98 @@
+
+  TestEth2ChainRelayUnitActiveValidators
+    ✓ testGetActiveValidators1 (1037ms)
+    ✓ testGetActiveValidators2 (1032ms)
+
+  TestEth2ChainRelayUnitHelpers
+    ✓ testFinalizedBlockRoot (1027ms)
+    ✓ testCountTrueBools (1030ms)
+    ✓ testFloorlog2 (1026ms)
+    ✓ testNextPowOfTwo (1031ms)
+    ✓ testBitLength (1027ms)
+    ✓ testRevertBytes8 (1020ms)
+    ✓ testSlotToUnixTimestamp
+    ✓ testConcat
+    ✓ testToBytes
+    ✓ testSha256 (1023ms)
+
+  TestEth2ChainRelayUnitSignature
+    ✓ testSerializeAggregateSignature
+    ✓ testFastAggregateVerify
+
+  TestEth2ChainRelayUnitSSZ
+    ✓ testValidateMerkleBranch (1023ms)
+    ✓ testHashTreeRootSyncCommittee (1019ms)
+    ✓ testMerkleize (1020ms)
+    ✓ testGetSubtreeIndex (1026ms)
+    ✓ testMerkleizeSlot (1018ms)
+    ✓ testHashTreeRootBlsPubkey (1026ms)
+    ✓ testHashTreeRootPair (1030ms)
+
+  Contract: Evaluation_ChainRelay_32
+    ✓ should be deployable (156ms)
+Gas used by deployment  7829780
+    ✓ should be redeployable (1174ms)
+    ✓ should return initial block root (164ms)
+    ✓ should return initial state root (187ms)
+Gas used by submitUpdate: 921165
+    ✓ should apply update block and state root (1201ms)
+Gas used by submitUpdate: 1627697
+    ✓ should apply update block and state root and validator set (1197ms)
+    ✓ should fail if block too far away from last known validator set (1177ms)
+    ✓ should fail if wrong signature (1173ms)
+
+  Contract: Evaluation_ChainRelay_512
+    ✓ should be deployable (293ms)
+Gas used by deployment  3408066
+Gas used by deployment part 2 4729346
+Gas used by deployment part 3 4729345
+    ✓ should be redeployable (3223ms)
+    ✓ should return initial block root (158ms)
+    ✓ should return initial state root (156ms)
+Gas used by submitUpdate: 17757824
+    ✓ should apply update block and state root (1203ms)
+Gas used by submitUpdate: 28740948
+    ✓ should apply update block and state root and validator set (1194ms)
+    ✓ should fail if block too far away from last known validator set (1224ms)
+
+  Contract: Evaluation_ChainRelay_512_NoStorage
+    ✓ should be deployable (166ms)
+Gas used by deployment  3465093
+    ✓ should be redeployable
+    ✓ should return initial block root (170ms)
+    ✓ should return initial state root (163ms)
+Gas used by submitUpdate: 17711691
+    ✓ should apply update block and state root (1197ms)
+Gas used by submitUpdate: 17655521
+    ✓ should apply update block and state root and validator set (1193ms)
+Gas used by doing nothing and submitting: 1228671
+    ✓ test doing nothing with data (1204ms)
+Gas used by serializeAggregateSignature: 24730294
+    ✓ test serialize aggreagte signature gas usage (1194ms)
+Encoding character length  131586
+Gas used by testEncoding: 1603719
+    ✓ test encoding (1226ms)
+Gas used by testJustStoreSyncCommittee: 35362693
+    ✓ test store synccommittee first time (1182ms)
+Gas used by testJustStoreSyncCommittee: 4729411
+    ✓ test store synccommittee second time (1178ms)
+Gas used by testJustDoSyncCommitteeMerkleizationFromMemory: 4541111
+    ✓ test calculate synccommittee hash tree root from memory (1202ms)
+Gas used by testJustDoSyncCommitteeMerkleizationFromStorage: 7174719
+    ✓ test calculate synccommittee hash tree root from storage (1160ms)
+Gas used by testJustReadSyncCommitteeFromStorage: 4060122
+    ✓ test read sync committee from storage (1179ms)
+Gas used by testJustSubmitSyncCommitteeViaMemory: 1006287
+    ✓ test submit sync committee via memory (1185ms)
+Gas used by testJustSubmitSyncCommitteeViaCalldata: 595654
+    ✓ test submit sync committee via calldata (1182ms)
+Gas used by getFinalizedBlockRoot: 23614
+    ✓ test get finalized block root (206ms)
+Gas used by getFinalizedStateRoot: 23591
+    ✓ test get finalized state root (1188ms)
+Local contract size 16265 bytes
+Deployed contract size 15651 bytes
+    ✓ extract contract size (184ms)
+
+
+  55 passing (2m)
