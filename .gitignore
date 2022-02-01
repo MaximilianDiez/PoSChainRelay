@@ -1,1 +1,2 @@
-test/generate_data/ssz/venv
+test/ssz/venv/
+node_modules/
