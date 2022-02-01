@@ -60,14 +60,14 @@ go run bls-eth-go-binary/generate_signature_test_data.go
 
 ### Generating SSZ structures and merkle proofs
 
-All the test data used by the Truffle test scenarios is generated from or similar to the code in the file `test/ssz/generate_ssz_test_data.py`. The file can be run to re-generate lots of test data or can be used as a boilerplate for generating further test data. 
+All the test data used by the Truffle test scenarios is generated from or similar to the code in the file `test/generate_data/ssz/generate_ssz_test_data.py`. The file can be run to re-generate lots of test data or can be used as a boilerplate for generating further test data. 
 
 Please note that this file is a log of many commands used for generating test data structures for the evaluation of the prototype and some data might be outdated. For a structured introduction to generating SSZ data structures, please refer to the Ethereum specification.
 
 The file can be run by installing Python 3 (do consider creating a [virtual environment](https://docs.python.org/3/library/venv.html) beforehand) and running the commands
 
 ```bash
-cd test/ssz
+cd test/generate_data/ssz
 pip3 install -r requirements.txt
 python3 generate_ssz_test_data.py
 ```
