@@ -1,2 +1,3 @@
 test/generate_data/ssz/venv/
 node_modules/
+installed_contracts

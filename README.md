@@ -39,6 +39,7 @@ In order to deploy the smart contracts and run the tests, make sure [Truffle](ht
 
 ```bash
 npm install
+truffle install
 truffle test
 ```
 
@@ -50,12 +51,13 @@ The file `recording_test_results.txt` contains a recording of the output of runn
 
 ### Generating BLS aggregate signatures for testing
 
-In order to generate BLS multi-signatures for testing purposes, [compiled binaries of Herumi's BLS library](https://github.com/herumi/bls-eth-go-binary) are used with a Eth2 compatible configuration. Messages are signed with a set of pseudo-random private keys, which are derived from a seed and therefore deterministic. The number of signers (default 512) as well as the message to be signed (default `32BytesMessageForSigningGoodness`) can be adjusted in `test/generate/data/generate_signature_test_data.go`. 
+In order to generate BLS multi-signatures for testing purposes, [compiled binaries of Herumi's BLS library](https://github.com/herumi/bls-eth-go-binary) are used with a Eth2 compatible configuration. Messages are signed with a set of pseudo-random private keys, which are derived from a seed and therefore deterministic. The number of signers (default 512) as well as the message to be signed (default `32BytesMessageForSigningGoodness`) can be adjusted in `test/generate_data/signature/generate_signature_test_data.go`. 
 
 To generate test data and print it to a shell, make sure [Go](https://golang.org/) is installed and run
 
 ```bash
-go run bls-eth-go-binary/generate_signature_test_data.go
+cd test/generate_data/signature
+go run generate_signature_test_data.go
 ```
 
 ### Generating SSZ structures and merkle proofs
