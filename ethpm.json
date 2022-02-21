@@ -1,0 +1,19 @@
+{
+    "package_name": "verilay",
+    "version": "0.1.0",
+    "description": "PoS Chain Relay",
+    "authors": [
+      "Maximilian Diez <maximilian.diez@alumni.uni-potsdam.de>",
+      "Martin Westerkamp <westerkamp@tu-berlin.de"
+    ],
+    "keywords": [
+      "ethereum",
+      "pos",
+      "relay"
+    ],
+    "dependencies": {
+      "bytes": "^0.8.0"
+    },
+    "license": "GPLv3"
+  }
+  
