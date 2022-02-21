@@ -20,9 +20,10 @@ This section describes how to get started with running the chain relay prototype
 Deploying and testing the chain relay prototype requires running a custom version of the [Go Ethereum](https://github.com/ethereum/go-ethereum) client. In order to compile the custom version of Go Ethereum and create and run a custom ephemeral version of the Ethereum blockchain, make sure [Go](https://golang.org/) as well as a C compiler is installed and execute the following commands:
 
 ```bash
+git submodule update --init
 cd verilay-go-ethereum
 make geth 
-./build/bin/geth --rpc.gascap 30000000 --datadir test-chain-dir --http --dev --vmdebug --verbosity 3 --rpcapi debug,eth,personal,net,web3
+./build/bin/geth --rpc.gascap 30000000 --datadir test-chain-dir --http --dev --vmdebug --verbosity 3 --http.api debug,eth,personal,net,web3
 ```
 
 The customized files in `verilay-go-ethereum` are 
